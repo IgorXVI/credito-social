@@ -1,0 +1,23 @@
+{
+  "name": "credito-social",
+  "version": "1.0.0",
+  "description": "Servidor que vai guardar os dados e scores de cada pessoa e sincronizar com o servidor de ongs e o servidor de crimes.",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorXVI/credito-social.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorXVI/credito-social/issues"
+  },
+  "homepage": "https://github.com/IgorXVI/credito-social#readme",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "delay": "^4.4.0"
+  }
+}
