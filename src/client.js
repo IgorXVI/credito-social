@@ -43,8 +43,8 @@ const run = async () => {
 
 //confere se o cluster é o master
 if (cluster.isMaster) {
-    //se for, cria 5 processos filhos separados, que vão rodar em paralelo
-    for (let i = 0; i < 5; i++) {
+    //se for, cria 2 processos filhos separados, que vão rodar em paralelo
+    for (let i = 0; i < 2; i++) {
         cluster.fork()
     }
 }

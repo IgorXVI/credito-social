@@ -35,18 +35,23 @@ const createServer = ({
     port
 }) => {
     const server = net.createServer(conn => {
-        //lida com a requisição do cliente
-        conn.on("data", clientData =>
-            //manda os dados que o cliente informa no formato de json  
-            requestHandler(formater.parseDataToJSON(clientData))
-                //manda os dados retornados da função para o cliente
-                .then(response => conn.write(formater.formatToSendJSON(response)))
-                //lida com erros dentro da função
-                .catch(errorHandler)
-        )
+        try {
+            //lida com a requisição do cliente
+            conn.on("data", clientData =>
+                //manda os dados que o cliente informa no formato de json  
+                requestHandler(formater.parseDataToJSON(clientData))
+                    //manda os dados retornados da função para o cliente
+                    .then(response => conn.write(formater.formatToSendJSON(response)))
+                    //lida com erros dentro da função
+                    .catch(errorHandler)
+            )
 
-        //lida com erro
-        conn.on("error", errorHandler)
+            //lida com erro
+            conn.on("error", errorHandler)
+        }
+        catch (error) {
+            errorHandler(error)
+        }
     })
 
     //escuta na porta informada pelo usuário
