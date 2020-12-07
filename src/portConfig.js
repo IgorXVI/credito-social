@@ -1,4 +1,5 @@
 module.exports = {
-    client: 2000,
-    authServer: 3000
+    scoreServer: 6661,
+    crimeServer: 6662,
+    donationServer: 6663
 }

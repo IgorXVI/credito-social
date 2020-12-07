@@ -13,7 +13,7 @@ Cliente que vai interagir com o servidor, enviando sujestões de score para uma 
 # Plano
 
 ## Cliente
-Vai mandar um identificador único aleatório de uma pessoa (uuid) para o servidor de scores e vai recber um número que represanta o score daquela pessoa.
+Vai mandar um identificador aleatório de uma pessoa para o servidor de scores e vai recber um número que represanta o score daquela pessoa.
 
 ## Servidor de Scores
 Vai receber do cliente um identificador de uma pessoa, vai pedir para o servidor de crimes e o servidor de doações um relatório sobre os atos dessa pessoa (um array de strings de cada servidor), vai calcular o score dessa pessoa com base dos valores que ele tem guardado em um JSON para cada ato, se o ato não existir no JSON, terá um valor de 0.

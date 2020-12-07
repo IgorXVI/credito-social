@@ -30,7 +30,7 @@ const createServer = ({
     //função que lida com as requisições, recebendo o json que o cliente manda e retornando um json de resposta, deve ser assíncrona 
     requestHandler,
     //função que lida com erros
-    errorHandler,
+    errorHandler = error => console.error(error),
     //porta do servidor
     port
 }) => {

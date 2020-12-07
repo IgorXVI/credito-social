@@ -4,7 +4,11 @@
   "description": "Servidor que vai guardar os dados e scores de cada pessoa e sincronizar com o servidor de ongs e o servidor de crimes.",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "node ./src/client",
+    "crimeServer": "nodemon ./src/crimeServer",
+    "donationServer": "nodemon ./src/donationServer",
+    "scoreServer": "nodemon ./src/scoreServer"
   },
   "repository": {
     "type": "git",
